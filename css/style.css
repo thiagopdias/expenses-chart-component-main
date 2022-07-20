@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.8rem;
+}
+
+:root {
+    --Soft-red: hsl(10, 79%, 65%);
+    --Cyan: hsl(186, 34%, 60%);
+    --Dark-brown: hsl(25, 47%, 15%);
+    --Medium-brown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
+    --Very-pale-orange: hsl(33, 100%, 98%);
+
+    font-size: 62.5%; /* 1rem = 10px*/
+}
+
+body {
+    background-color: var(--Cream);
+    padding-inline: 2rem;
+}
+
+.header {
+    margin: 0 auto;
+    margin-top: 3rem;
+    max-width: 50rem;
+    padding: 2rem;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    border-radius: 1rem;
+
+    background-color: var(--Soft-red);
+}
+
+.header .information-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.header .information-header h1 {
+    color: var(--Very-pale-orange);
+    font-weight: 400;
+}
+
+.header .information-header p {
+    color: var(--Very-pale-orange);
+    font-weight: 700;
+    font-size: 2.8rem;
+}
+
+.content {
+    margin: 0 auto;
+    margin-top: 2rem;
+    max-width: 50rem;
+    padding: 2rem;
+
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    background-color: var(--Very-pale-orange);
+}
+
+.content h1 {
+    color: var(--Dark-brown);
+    font-weight: 700;
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+}
+
+.content canvas {
+    margin-bottom: 2rem;
+}
+
+.content canvas.active {
+    background-color: var(--Cyan);
+}
+
+.content .amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    border-top: 5px solid var(--Cream);
+}
+
+.content .amount .total-month {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    margin-top: 2rem;
+}
+
+.content .amount .total-month p:first-child {
+    color: var(--Medium-brown);
+    font-weight: 400;
+}
+
+.content .amount .total-month p:last-child {
+    color: var(--Dark-brown);
+    font-weight: 700;
+    font-size: 3.8rem;
+}
+
+.content .amount .percent-month {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+    margin-top: 4rem;
+}
+
+.content .amount .percent-month p:first-child {
+    color: var(--Dark-brown);
+    font-weight: 700;
+}
+
+.content .amount .percent-month p:last-child {
+    color: var(--Medium-brown);
+    font-weight: 400;
+
+}
+
+.attribution { 
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center; 
+
+    margin-top: 2rem;
+}
+
+.attribution a { 
+    color: var(--Dark-brown); 
+    text-decoration: none;
+}
+
+@media(max-width: 375px) {
+    .content .amount {
+        justify-content: center;
+    }
+
+    .content .amount .percent-month {
+        align-items: center;
+    }
+}
+
+@media(max-width: 275px) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .header .information-header {
+        align-items: center;
+    }
+}
