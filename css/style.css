@@ -156,6 +156,7 @@ body {
 
 @media(max-width: 380px) {
     .content .amount {
+        flex-direction: column;
         justify-content: center;
     }
 
